@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="MiniBrowser.TaskPage"
+    x:Class="MiniBrowser.Create_task"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -22,17 +22,22 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock x:Name="ApplicationTitle" Text="Task details" Style="{StaticResource PhoneTextNormalStyle}"/>
-            <TextBlock x:Name="PageTitle" Text="page name" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock x:Name="pageHEader" Text="Gamify your life" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock x:Name="PageTitle" Text="Task" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
+
+        
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <Button Content="Rate this task healty" Click="Rate_healthy" Margin="9,115,-9,420" />
-            <Button Content="I Did This Shit!" Height="96" HorizontalAlignment="Left" Margin="103,432,0,0" Name="button1" VerticalAlignment="Top" Width="236" Background="Green" />
-            <Image Height="206" HorizontalAlignment="Left" Margin="103,193,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="236" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="2,71,0,0" Name="task_name"  VerticalAlignment="Top" Width="296" />
+            <TextBlock Style="{StaticResource PhoneTextTitle2Style}" HorizontalAlignment="Left" Margin="12,36,0,519" Name="Task_name_label" Text="What is the task name?" />
+            <TextBox Height="72" HorizontalAlignment="Left" Margin="0,181,0,0" Name="task_des"  VerticalAlignment="Top" Width="298" />
+            <TextBlock Style="{StaticResource PhoneTextTitle2Style}" HorizontalAlignment="Left" Margin="12,146,0,413" Name="Task_des_label" Text="Describe it." />
+            <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="138,337,0,0" Name="submitButton" Click="submitNewTask" VerticalAlignment="Top" Width="160" />
+            <TextBlock Visibility="Collapsed" HorizontalAlignment="Left" Margin="12,319,0,220" Name="emptyError" Text="You must give name and description" Width="206" />
         </Grid>
     </Grid>
-
+ 
     <!--Sample code showing usage of ApplicationBar-->
     <!--<phone:PhoneApplicationPage.ApplicationBar>
         <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
