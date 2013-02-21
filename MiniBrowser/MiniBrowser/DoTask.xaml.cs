@@ -26,7 +26,7 @@ namespace MiniBrowser
             {
                 Task task = new Task(task_name.Text, task_des.Text);
                 App.tasks.Add(task);
-                Navigation.GoToPage(this, Pages.Main);
+                Navigation.GoToPage(this, Pages.Main, null);
             }
             else
                 emptyError.Visibility = Visibility.Visible;

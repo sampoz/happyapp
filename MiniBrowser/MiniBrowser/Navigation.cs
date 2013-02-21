@@ -16,13 +16,19 @@ namespace MiniBrowser
     public static class Navigation
     {
 
-        public static void GoToPage(this PhoneApplicationPage currentPage, Pages page)
+        public static void GoToPage(this PhoneApplicationPage currentPage, Pages page, String id)
         {
             switch (page)
             {
                 case (Pages.Main):
                 currentPage.NavigationService.Navigate(new Uri("/MainPage.xaml",UriKind.Relative));
                 break;
+
+                case (Pages.Action):
+                String uri = "/TaskPage.xaml?Text="+id;
+                currentPage.NavigationService.Navigate(new Uri(uri, UriKind.Relative));
+                break;
+
             }
         }
 

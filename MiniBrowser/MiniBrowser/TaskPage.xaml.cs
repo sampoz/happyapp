@@ -16,21 +16,29 @@ namespace MiniBrowser
     public partial class TaskPage : PhoneApplicationPage
     {
         private Task task;
-        public TaskPage(String task_name)
+        public TaskPage()
         {
             InitializeComponent();
-            this.task = App.tasks.First(a => a.getName() == task_name);
-            if (this.task == null)
-            {
-                Navigation.GoToPage(this, Pages.Main);
-            }
+            
 
         }
         public void Rate_healthy(object sender, RoutedEventArgs e)
         {
             int h = task.getHealthy();
             task.setHealthy(h + 1);
+            
         }
 
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            IDictionary<string, string> parameters = this.NavigationContext.QueryString;
+            if(parameters.ContainsKey("Text")){
+                String id = parameters["Text"];
+                 this.task = App.tasks.First(a => a.getName() == id);
+                 PageTitle.Text = id;
+            } else
+                Navigation.GoToPage(this, Pages.Main, null);
+        }
     }
 }

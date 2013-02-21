@@ -23,9 +23,8 @@ namespace MiniBrowser
             this.Username = Username;
             this.Password = Password;
 
-            this.Favourites = new List<Task>();
-            this.Favourites.Add(new Task("Madness", "tietoa"));
-            this.Favourites.Add(new Task("Sparta","tietoa"));
+            this.Favourites = App.tasks;
+            
 
         }
     }

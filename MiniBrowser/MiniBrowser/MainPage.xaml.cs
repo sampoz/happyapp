@@ -109,9 +109,13 @@ namespace MiniBrowser
                     var sv = e.Control as ScrollViewer;
                     var sp = sv.Content as StackPanel;
                     var textBlock = sp.Children[0] as TextBlock;
-             
-                        
-                        usernameLabel.Text =  textBlock.Text;
+
+                    Navigation.GoToPage(this, Pages.Action, textBlock.Text);
+
+                    //Navigation.GoToPage(this, Pages.Action, textBlock.Text);
+
+
+                    
                       /*  var line = new Line()
                         {
                             Stroke = new SolidColorBrush(Colors.White),
