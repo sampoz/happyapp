@@ -76,6 +76,9 @@ namespace MiniBrowser
             if (e.NewState.Name == "CompressionLeft")
             {
                 markAsComplete = true;
+                string uri = "/TaskPage.xaml?Text=";
+                uri += usernameLabel.Text;
+                NavigationService.Navigate(new Uri(uri, UriKind.Relative));
             }
             else if (e.NewState.Name == "CompressionRight")
             {
@@ -109,9 +112,14 @@ namespace MiniBrowser
                     var sv = e.Control as ScrollViewer;
                     var sp = sv.Content as StackPanel;
                     var textBlock = sp.Children[0] as TextBlock;
+
              
                         
                         usernameLabel.Text =  textBlock.Text;
+                        string uri = "/TaskPage.xaml?Text=";
+                        uri += usernameLabel.Text;
+                        NavigationService.Navigate(new Uri(uri, UriKind.Relative));
+					
                       /*  var line = new Line()
                         {
                             Stroke = new SolidColorBrush(Colors.White),

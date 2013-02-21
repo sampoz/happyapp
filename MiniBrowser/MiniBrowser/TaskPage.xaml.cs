@@ -26,6 +26,15 @@ namespace MiniBrowser
             }
 
         }
+        protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+            IDictionary<string, string> parameters = this.NavigationContext.QueryString;
+            if (parameters.ContainsKey("Text"))
+            {
+                PageTitle.Text = parameters["Text"];
+            }
+        }
         public void Rate_healthy(object sender, RoutedEventArgs e)
         {
             int h = task.getHealthy();
