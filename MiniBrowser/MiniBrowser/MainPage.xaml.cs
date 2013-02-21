@@ -74,11 +74,11 @@ namespace MiniBrowser
         {
             if (e.NewState.Name == "CompressionLeft")
             {
-                deleteItem = true;
+                markAsComplete = true;
             }
             else if (e.NewState.Name == "CompressionRight")
             {
-                markAsComplete = true;
+               // Do nothing
             }
             else if (e.NewState.Name == "NoHorizontalCompression" && !scrolling)
             {
@@ -107,11 +107,14 @@ namespace MiniBrowser
                 {
                     var sv = e.Control as ScrollViewer;
                     var sp = sv.Content as StackPanel;
-                    var centralPanel = sp.Children[1] as Grid;
-                    if (centralPanel.Children.Count == 1)
-                    {
-                        var textBlock = centralPanel.Children[0] as TextBlock;
-                        usernameLabel.Text =  textBlock.Text;
+                    var textBlock = sp.Children[0] as TextBlock;
+
+                    Navigation.GoToPage(this, Pages.Action, textBlock.Text);
+
+                    //Navigation.GoToPage(this, Pages.Action, textBlock.Text);
+
+
+                    
                       /*  var line = new Line()
                         {
                             Stroke = new SolidColorBrush(Colors.White),
@@ -123,7 +126,7 @@ namespace MiniBrowser
                         };
 
                         centralPanel.Children.Add(line);*/
-                    }
+                    
                 }
                 var storyboard = new Storyboard();
                 var animation = new DoubleAnimation()

@@ -15,6 +15,7 @@ namespace MiniBrowser
     {
         Main,
         Stats,
-        Action
+        Action,
+        CreateTask
     }
 }

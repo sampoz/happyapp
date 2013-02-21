@@ -27,7 +27,7 @@ namespace MiniBrowser
             if (passwordInput.Text.Equals(passwordConfirm.Text))
             {
                 App.User = new User(nameInput.Text, passwordInput.Text);
-                Navigation.GoToPage(this,Pages.Main);
+                Navigation.GoToPage(this,Pages.Main, null);
             }
             else
                 passwordError.Visibility = Visibility.Visible;

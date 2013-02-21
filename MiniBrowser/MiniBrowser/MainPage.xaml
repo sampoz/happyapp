@@ -25,6 +25,7 @@
             <Setter Property="BorderThickness" Value="0"/>
             <Setter Property="BorderBrush" Value="Transparent"/>
             <Setter Property="HorizontalOffset" Value="150" />
+            <Setter Property="FlowDirection" Value="LeftToRight" />
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="ScrollViewer">
@@ -103,17 +104,10 @@
                             <local:ScrollViewerOffsetMediator x:Name="Mediator" ScrollViewer="{Binding ElementName=ItemScroller}" HorizontalOffset="150" />
                             <ScrollViewer x:Name="ItemScroller" Tag="{Binding ElementName=Mediator}" Width="456" Style="{StaticResource ListItemScrollViewer}" Loaded="ScrollViewer_Loaded">
                                 <StackPanel Orientation="Horizontal">
-                                    <Grid Width="150">
-                                        
-                                        <TextBlock Text=" " FontSize="33" HorizontalAlignment="Center" />
-                                    </Grid>
-                                    <Grid Background="Black" Width="456" Margin="10">
-                                        <TextBlock FontSize="30" Text="{Binding}" />
-                                    </Grid>
-                                    <Grid Width="150">
-
-                                        <Image Source="resources/appbar.next.rest.png" Height="45" Width="45"/>
-                                    </Grid>
+                                    <TextBlock FontSize="30" Text="{Binding}" />
+                                    <Image Source="resources/appbar.next.rest.png" Height="45" Width="45"/>
+                                    
+                                         
                                 </StackPanel>
                             </ScrollViewer>
                         </Grid>
@@ -124,7 +118,7 @@
         </Grid>
         <TextBlock Height="106" HorizontalAlignment="Left" Name="usernameLabel" Style="{StaticResource PhoneTextTitle1Style}" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="308" Margin="12,12,0,0" />
         <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,0,0,270" Name="welcomeText" Text="welcome" />
-        <Button Content="Create new Task" Click="Create_task" Margin="12,124,12,147" />
+        <Button Content="Create new Task" Click="Create_task" Margin="12,124,226,147" Grid.ColumnSpan="2" />
 
     </Grid>
  

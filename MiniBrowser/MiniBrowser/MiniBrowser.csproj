@@ -63,6 +63,8 @@
     </Compile>
     <Compile Include="DoTask.xaml.cs">
       <DependentUpon>DoTask.xaml</DependentUpon>
+    <Compile Include="CreateTask.xaml.cs">
+      <DependentUpon>CreateTask.xaml</DependentUpon>
     </Compile>
     <Compile Include="StatsPage.xaml.cs">
       <DependentUpon>StatsPage.xaml</DependentUpon>
@@ -89,6 +91,7 @@
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
     <Page Include="DoTask.xaml">
+    <Page Include="CreateTask.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

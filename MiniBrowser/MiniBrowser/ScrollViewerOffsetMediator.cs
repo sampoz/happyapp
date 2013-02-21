@@ -56,9 +56,9 @@ namespace MiniBrowser
         {
 
             var mediator = (ScrollViewerOffsetMediator)o;
-            if ((double)e.NewValue > -1 && mediator.ScrollViewer != null)
+            if (mediator.ScrollViewer != null)
             {
-             //   mediator.ScrollViewer.ScrollToHorizontalOffset((double)(e.NewValue));
+                mediator.ScrollViewer.ScrollToHorizontalOffset((double)(e.NewValue));
             }
         }
     }

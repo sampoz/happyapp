@@ -15,11 +15,22 @@ namespace MiniBrowser
     {
         String name { get; set; }
         String description { get; set; }
+        String imgSrc { get; set; }
         int healthy;
-        public Task(String name, String des)
+        public Task(String name, String des, String imgSrc="")
         {
+            this.imgSrc = imgSrc;
             this.name = name;
             this.description = des;
+        }
+
+        public String getImgSrc()
+        {
+            return this.imgSrc;
+        }
+        public void setImgSrc(String src)
+        {
+            this.imgSrc= src;
         }
         public String getName()
         {
