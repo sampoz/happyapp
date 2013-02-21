@@ -61,9 +61,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Create_task.xaml.cs">
-      <DependentUpon>Create_task.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ScrollViewerOffsetMediator.cs" />
     <Compile Include="Navigation.cs" />
     <Compile Include="NewUser.xaml.cs">
@@ -85,10 +82,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </ApplicationDefinition>
-    <Page Include="Create_task.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
