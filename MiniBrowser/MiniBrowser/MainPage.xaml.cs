@@ -11,7 +11,6 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Tasks;
-using System.Collections.Generic;
 using System.Collections;
 using System.Collections.ObjectModel;
 
