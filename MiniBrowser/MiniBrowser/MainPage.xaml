@@ -15,6 +15,7 @@
     shell:SystemTray.IsVisible="True"
     DataContext="{Binding RelativeSource={RelativeSource Self}}">
 
+   
     <phone:PhoneApplicationPage.Resources>
         <Style x:Key="ListItemScrollViewer" TargetType="ScrollViewer">
             <Setter Property="VerticalScrollBarVisibility" Value="Disabled"/>
@@ -123,6 +124,8 @@
         </Grid>
         <TextBlock Height="106" HorizontalAlignment="Left" Name="usernameLabel" Style="{StaticResource PhoneTextTitle1Style}" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="308" Margin="12,12,0,0" />
         <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,0,0,270" Name="welcomeText" Text="welcome" />
+        <Button Content="Create new Task" Click="Create_task" Margin="12,124,12,147" />
+
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
