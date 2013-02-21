@@ -37,7 +37,7 @@ namespace MiniBrowser
 
             List<string> favourites = new List<string>();
             foreach (Task t in App.User.Favourites)
-                Items.Add(t.Name);
+                Items.Add(t.getName());
 
             usernameLabel.Text = App.User.Username;
 
