@@ -33,7 +33,6 @@ namespace MiniBrowser
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            HealthFill.Begin();
             /*var unit = MyCanvas.ActualWidth / 4;
             HealthBar.Width += unit;
             if (HealthBar.Width > unit * 4) HealthBar.Width = 1;*/
