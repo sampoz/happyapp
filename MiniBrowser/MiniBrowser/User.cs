@@ -45,12 +45,12 @@ namespace MiniBrowser
         }
         public int giveStatus()
         {
-            int sum = 0;
+            
             int status = 0;
             for (int i = 0; i < this.doneTasks.Count; i++ )
             {
                 Task task = this.doneTasks[i];
-                sum += task.status;
+                status += task.status;
             }
 
             if (status > 100)
