@@ -19,7 +19,7 @@ namespace MiniBrowser
         { get { return _description; } }
         String imgSrc { get; set; }
         int healthy;
-        public Task(String name, String des, String imgSrc)
+        public Task(String name, String des, String imgSrc="")
         {
             this.imgSrc = imgSrc;
             this.name = name;
