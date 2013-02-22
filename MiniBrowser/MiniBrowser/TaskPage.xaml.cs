@@ -12,6 +12,7 @@ using System.Windows.Shapes;
 using System.Collections;
 using System.Collections.ObjectModel;
 using Microsoft.Phone.Controls;
+using System.Windows.Media.Imaging;
 
 namespace MiniBrowser
 {
@@ -58,9 +59,25 @@ namespace MiniBrowser
                  taskDesc.Text = this.task.Description;
                  setStatusNumber();         
                  PageTitle.Text = id;
+                 if (this.task.getImgSrc() != null)
+                 {
+
+                     
+                     String tempSrc = this.task.getImgSrc();
+                     BitmapSource tn = new BitmapImage(new Uri(tempSrc, UriKind.Relative));
+                         
+                     //tn.SetSource(Application.GetResourceStream(new Uri(tempSrc, UriKind.Relative)).Stream);
+                     image1.Source = tn;
+                 }
             } else
                 Navigation.GoToPage(this, Pages.Main, null);
         }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            App.User.addTask(this.task);
+        }
+        
 
         public void ScrollViewer_Loaded(object sender, RoutedEventArgs e)
         {

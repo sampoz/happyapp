@@ -22,11 +22,19 @@ namespace MiniBrowser
         public int status = 0;
 
         int healthy;
-        public Task(String name, String des, String imgSrc="")
+        public Task(String name, String des, String imgSrc)
         {
             this.imgSrc = imgSrc;
             this.name = name;
+
+
+
             this._description = des;
+            if (imgSrc == null)
+            {
+                imgSrc = "";
+            }
+
         }
 
         public String getImgSrc()
