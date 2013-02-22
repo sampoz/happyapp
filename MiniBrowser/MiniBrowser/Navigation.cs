@@ -33,6 +33,10 @@ namespace MiniBrowser
                 currentPage.NavigationService.Navigate(new Uri("/CreateTask.xaml", UriKind.Relative));
                 break;
 
+                case(Pages.Stats):
+                currentPage.NavigationService.Navigate(new Uri("/StatsPage.xaml", UriKind.Relative));
+                break;
+
             }
         }
 

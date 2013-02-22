@@ -9,6 +9,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 
 namespace MiniBrowser
 {
@@ -38,6 +39,32 @@ namespace MiniBrowser
         {
             this.doneTasks.Add(taski);
        
+        }
+        public ObservableCollection<string> giveTopTasks()
+        {
+            ObservableCollection<string> Items = new ObservableCollection<string>();
+            foreach(Task task in this.doneTasks){
+                Items.Add(task.getName());
+                
+            }
+            return Items;
+        }
+        public int giveStatus()
+        {
+            
+            int status = 0;
+            for (int i = 0; i < this.doneTasks.Count; i++ )
+            {
+                Task task = this.doneTasks[i];
+                status += task.status;
+            }
+
+            if (status > 100)
+            {
+                status = 100;
+            }
+            return status;
+             
         }
     }
 }

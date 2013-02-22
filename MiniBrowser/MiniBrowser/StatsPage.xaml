@@ -1,5 +1,5 @@
 ﻿<phone:PhoneApplicationPage 
-    x:Class="MiniBrowser.Page1"
+    x:Class="MiniBrowser.StatsPage"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
@@ -11,7 +11,9 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+   DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
 
     <phone:PhoneApplicationPage.Resources>
     	<Storyboard x:Name="HealthFill">
@@ -81,9 +83,19 @@
                 <Image x:Name="face" Source="derpherp.png"/>
             </Grid>
             <StackPanel Grid.Row="2">
-            <Button Grid.Row="2" Height="100" Width="300" Content="Press me" Click="Button_Click"/>
-            <Button Grid.Row="2" Height="100" Width="300" Content="Drugs" Click="Button_Click_1"/>
+                <ListBox x:Name="listbox" ItemsSource="{Binding TopTasks}" Margin="0,62,-12,-98" Height="243">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <TextBlock FontSize="50" Text="{Binding}" />
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
             </StackPanel>
+        </Grid>
+        <Grid>
+
         </Grid>
     </Grid>
  
