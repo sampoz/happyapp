@@ -79,10 +79,10 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="face" Source="derpherp.png"/>
+                <Image x:Name="face" Source="derpherp.png" Height="169" Margin="0,0,39,59" />
             </Grid>
           
-        <TextBlock FontSize="50" Name="topTasks" Text="{Binding}" Margin="9,0,-9,89" Grid.Row="2" />
+        <TextBlock FontSize="35" Name="topTasks" Text="{Binding}" Margin="9,176,-9,89" Grid.Row="1" Grid.RowSpan="2" />
                        
         </Grid>
         <Grid>

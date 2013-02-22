@@ -46,6 +46,10 @@ namespace MiniBrowser
             String line_break = "!&#13;";
             foreach(Task task in this.doneTasks){
                 Items += task.getName();
+                Items += "  ";
+                if (task.status > 0)
+                    Items += "+";
+                Items += task.status;
                 Items += Environment.NewLine;
                 
             }
