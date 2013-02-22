@@ -26,9 +26,6 @@ namespace MiniBrowser
         {
             this.imgSrc = imgSrc;
             this.name = name;
-
-
-
             this._description = des;
             if (imgSrc == null)
             {
