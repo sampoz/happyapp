@@ -14,14 +14,16 @@ namespace MiniBrowser
     public class Task
     {
         String name { get; set; }
-        String description { get; set; }
+        private String _description;
+        public String Description
+        { get { return _description; } }
         String imgSrc { get; set; }
         int healthy;
         public Task(String name, String des, String imgSrc)
         {
             this.imgSrc = imgSrc;
             this.name = name;
-            this.description = des;
+            this._description = des;
         }
 
         public String getImgSrc()

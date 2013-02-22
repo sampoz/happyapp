@@ -112,21 +112,7 @@ namespace MiniBrowser
 
                     Navigation.GoToPage(this, Pages.Action, textBlock.Text);
 
-                    //Navigation.GoToPage(this, Pages.Action, textBlock.Text);
-
-
                     
-                      /*  var line = new Line()
-                        {
-                            Stroke = new SolidColorBrush(Colors.White),
-                            StrokeThickness = 2,
-                            X1 = 0,
-                            Y1 = textBlock.ActualHeight / 2,
-                            X2 = textBlock.ActualWidth,
-                            Y2 = textBlock.ActualHeight / 2
-                        };
-
-                        centralPanel.Children.Add(line);*/
                     
                 }
                 var storyboard = new Storyboard();

@@ -31,8 +31,14 @@ namespace MiniBrowser
         /// </summary>
         public App()
         {
-            tasks.Add(new Task("Madness", "tietoa"));
-            tasks.Add(new Task("Sparta", "tietoa"));
+            tasks.Add(new Task("Madness", "tietoa", null));
+            tasks.Add(new Task("Sparta", "tietoa", null));
+
+            for (int i = 0; i < 20; i++ )
+            {
+                tasks.Add(new Task("Task " + i, "LOLOLOLOLOLOLOLOLOL", null));
+
+            }
             // Global handler for uncaught exceptions. 
             UnhandledException += Application_UnhandledException;
 

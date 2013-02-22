@@ -24,13 +24,10 @@ namespace MiniBrowser
         public void submitNewUser(object render, RoutedEventArgs e)
         {
 
-            if (passwordInput.Text.Equals(passwordConfirm.Text))
-            {
-                App.User = new User(nameInput.Text, passwordInput.Text);
+            
+                App.User = new User(nameInput.Text);
                 Navigation.GoToPage(this,Pages.Main, null);
-            }
-            else
-                passwordError.Visibility = Visibility.Visible;
+            
         }
     }
 }

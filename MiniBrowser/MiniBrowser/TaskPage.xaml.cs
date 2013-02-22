@@ -36,6 +36,7 @@ namespace MiniBrowser
             if(parameters.ContainsKey("Text")){
                 String id = parameters["Text"];
                  this.task = App.tasks.First(a => a.getName() == id);
+                 taskDesc.Text = this.task.Description;
                  PageTitle.Text = id;
             } else
                 Navigation.GoToPage(this, Pages.Main, null);

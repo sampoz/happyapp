@@ -15,13 +15,14 @@ namespace MiniBrowser
     public class User
     {
         public string Username { get; set; }
-        public string Password { get; set; }
-        public List<Task> Favourites { get; set; }
+
+        private List<Task> _favourites = new List<Task>();
+        public List<Task> Favourites { get { return _favourites; } set { _favourites = value; } }
         
-        public User(string Username, string Password)
+        public User(string Username)
         {
             this.Username = Username;
-            this.Password = Password;
+            
 
             this.Favourites = App.tasks;
             

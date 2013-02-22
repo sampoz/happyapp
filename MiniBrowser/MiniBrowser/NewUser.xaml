@@ -30,10 +30,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBox Height="72" HorizontalAlignment="Left" Margin="2,71,0,0" Name="nameInput"  VerticalAlignment="Top" Width="296" />
             <TextBlock Style="{StaticResource PhoneTextTitle2Style}" HorizontalAlignment="Left" Margin="12,36,0,519" Name="textBlock1" Text="What is your name?" />
-            <TextBox Height="72" HorizontalAlignment="Left" Margin="0,181,0,0" Name="passwordInput"  VerticalAlignment="Top" Width="298" />
-            <TextBox Height="72" HorizontalAlignment="Left" Margin="0,259,0,0" Name="passwordConfirm"  VerticalAlignment="Top" Width="298" />
-            <TextBlock Style="{StaticResource PhoneTextTitle2Style}" HorizontalAlignment="Left" Margin="12,146,0,413" Name="passwordLabel" Text="Choose a secret word" />
-            <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="138,337,0,0" Name="submitButton" Click="submitNewUser" VerticalAlignment="Top" Width="160" />
+            <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="291,71,0,0" Name="submitButton" Click="submitNewUser" VerticalAlignment="Top" Width="87" />
             <TextBlock Visibility="Collapsed" HorizontalAlignment="Left" Margin="12,319,0,220" Name="passwordError" Text="Passwords don't match" Width="206" />
         </Grid>
     </Grid>
