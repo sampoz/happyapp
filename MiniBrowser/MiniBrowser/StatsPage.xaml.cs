@@ -24,9 +24,13 @@ namespace MiniBrowser
             SetFace();
             double maxWidth = 450;
             double unit = maxWidth / 100;
-            if(App.User.giveStatus() * 25  > maxWidth)
+            double initPosition = maxWidth / 2;
+            if(App.User.giveStatus() * unit + initPosition > maxWidth)
                 HealthBar.Width = maxWidth;
-            HealthBar.Width = App.User.giveStatus() * unit;
+            if (App.User.giveStatus() * unit + initPosition < 0)
+                HealthBar.Width = 0;
+            else
+                HealthBar.Width = App.User.giveStatus() * unit + initPosition;
             TopTasks = App.User.giveTopTasks();
             topTasks.Text = TopTasks;
         }
@@ -35,11 +39,11 @@ namespace MiniBrowser
         {
             var happy = App.User.giveStatus();
             String pic = "";
-            if (happy < 25)
+            if (happy < -25)
             {
                 pic = "derpherp_sad.png";
             }
-            else if (happy < 60)
+            else if (happy < 10)
             {
                 pic = "derpherp_okay.png";
             }
