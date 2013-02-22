@@ -163,6 +163,8 @@
     <Resource Include="derpherp.png" />
     <Resource Include="derpherp_sad.png" />
     <Content Include="resources\DarkIcons.dll" />
+    <Resource Include="resources\runner.png" />
+    <Resource Include="resources\SPARTA.jpg" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />

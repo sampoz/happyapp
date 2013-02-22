@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot" Background="Purple">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -27,9 +27,12 @@
         </StackPanel>
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+
             <Button Content="I Did This Shit!" Height="96" HorizontalAlignment="Left" Margin="103,432,0,0" Name="button1" VerticalAlignment="Top" Width="236"  Background="Green" />
-            <Image Height="206" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="236" />
-            <TextBlock Height="70" HorizontalAlignment="Left" Margin="12,212,0,0" Name="taskDesc" Text="Description" VerticalAlignment="Top" Width="438" />
+            <Image Height="206" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="236" Margin="103,212,0,0" />
+            <TextBlock Height="28" HorizontalAlignment="Center" Margin="107,173,101,0" Name="taskDesc" Text="Description" VerticalAlignment="Top" Width="248"  />
+  <Button Content="Rate this task healty" Click="Rate_healthy" Margin="9,115,-9,420" />
+            
         </Grid>
     </Grid>
 
