@@ -39,6 +39,13 @@ namespace MiniBrowser
                 tasks.Add(new Task("Task " + i, "LOLOLOLOLOLOLOLOLOL", null));
 
             }
+
+            tasks.Add(new Task("Madness", "tietoa",null));
+            tasks.Add(new Task("Sparta", "tietoa","/MiniBrowser;component/resources/SPARTA.jpg"));
+
+            tasks.Add(new Task("Running", "Is fun", "/MiniBrowser;component/resources/runner.png"));
+            
+
             // Global handler for uncaught exceptions. 
             UnhandledException += Application_UnhandledException;
 

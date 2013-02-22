@@ -155,7 +155,7 @@ namespace MiniBrowser
         }
         private void Create_task(object sender, RoutedEventArgs e)
         {
-            NavigationService.Navigate(new Uri("/Create_task.xaml",UriKind.Relative));
+            Navigation.GoToPage(this, Pages.CreateTask, null);
         }
         }
     }

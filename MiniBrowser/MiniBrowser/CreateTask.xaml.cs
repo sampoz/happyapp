@@ -24,7 +24,7 @@ namespace MiniBrowser
             Console.WriteLine("task name ", task_name.Text);
             if (!task_name.Text.Equals("") || !task_des.Text.Equals(""))
             {
-                Task task = new Task(task_name.Text, task_des.Text);
+                Task task = new Task(task_name.Text, task_des.Text,null);
                 App.tasks.Add(task);
                 Navigation.GoToPage(this, Pages.Main, null);
             }
