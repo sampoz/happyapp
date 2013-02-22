@@ -13,9 +13,9 @@ using Microsoft.Phone.Controls;
 
 namespace MiniBrowser
 {
-    public partial class Create_task : PhoneApplicationPage
+    public partial class CreateTask : PhoneApplicationPage
     {
-        public Create_task()
+        public CreateTask()
         {
             InitializeComponent();
         }
