@@ -20,7 +20,11 @@ namespace MiniBrowser
         {
             InitializeComponent();
 
-            HealthBar.Width = 400;
+            double maxWidth = 450;
+            double unit = maxWidth / 100;
+            if(App.User.giveStatus() * 25  > maxWidth)
+                HealthBar.Width = maxWidth;
+            HealthBar.Width = App.User.giveStatus() * unit;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
