@@ -52,11 +52,11 @@ namespace MiniBrowser
         {
             var happy = App.User.giveStatus();
             String pic = "";
-            if (happy < 25)
+            if (happy < -25)
             {
                 pic = "derpherp_sad.png";
             }
-            else if (happy < 60)
+            else if (happy < 10)
             {
                 pic = "derpherp_okay.png";
             }

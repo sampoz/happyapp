@@ -48,17 +48,19 @@ namespace MiniBrowser
             {
                 if (!topTasks.ContainsKey(task.getName()))
                 {
-                    topTasks.Add(task.getName(), 1);
+                    topTasks.Add(task.getName(), task.status);
                 }
                 else {
                     int temp = topTasks[task.getName()];
-                    topTasks[task.getName()] = temp + 1;
+                    topTasks[task.getName()] = temp + task.status;
                 }
             }
             foreach (KeyValuePair<string, int> pair in topTasks)
             {
                 Items += pair.Key;
-                Items += "  +";
+                Items += "  ";
+                if(pair.Value > 0)
+                Items += "+";
                 Items += pair.Value;
                 Items += Environment.NewLine;
 
@@ -76,14 +78,6 @@ namespace MiniBrowser
                 status += task.status;
             }
 
-            if (status > 100)
-            {
-                status = 100;
-            }
-            if (status < 0)
-            {
-                status = 0;
-            }
             return status;
              
         }
