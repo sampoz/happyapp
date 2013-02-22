@@ -19,6 +19,7 @@ namespace MiniBrowser
         public NewUser()
         {
             InitializeComponent();
+            OpenSesame.Completed += new EventHandler(OpenSesame_Completed);
         }
 
         public void submitNewUser(object render, RoutedEventArgs e)
@@ -26,8 +27,15 @@ namespace MiniBrowser
 
             
                 App.User = new User(nameInput.Text);
-                Navigation.GoToPage(this,Pages.Main, null);
+                OpenSesame.Begin();
             
+        }
+
+        void OpenSesame_Completed(object sender, EventArgs e)
+        {
+            OpenSesame.Stop();
+            OpenSesame.Seek(System.TimeSpan.FromTicks(0));
+            Navigation.GoToPage(this, Pages.Main, null);
         }
     }
 }
