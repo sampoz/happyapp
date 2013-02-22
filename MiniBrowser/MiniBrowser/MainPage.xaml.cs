@@ -13,6 +13,7 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Tasks;
 using System.Collections;
 using System.Collections.ObjectModel;
+using System.Windows.Media.Imaging;
 
 namespace MiniBrowser
 {
@@ -32,13 +33,16 @@ namespace MiniBrowser
 
         public MainPage()
         {
+            App.main = this;
             InitializeComponent();
-
+            SetFace();
             List<string> favourites = new List<string>();
             foreach (Task t in App.User.Favourites)
                 Items.Add(t.getName());
 
             usernameLabel.Text = App.User.Username;
+
+            
 
             //    favouriteList.ItemsSource = favourites;
 
@@ -46,6 +50,24 @@ namespace MiniBrowser
 
         public void SetFace()
         {
+            var happy = App.User.giveStatus();
+            String pic = "";
+            if (happy < 25)
+            {
+                pic = "derpherp_sad.png";
+            }
+            else if (happy < 60)
+            {
+                pic = "derpherp_okay.png";
+            }
+            else
+            {
+                pic = "derpherp.png";
+            }
+            pic = "/MiniBrowser;component/" + pic;
+            Uri uri = new Uri(pic, UriKind.Relative);
+            ImageSource imgSource = new BitmapImage(uri);
+            MainImage.Source = imgSource; 
         }
 
 

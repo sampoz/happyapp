@@ -21,7 +21,7 @@ namespace MiniBrowser
         public StatsPage()
         {
             InitializeComponent();
-
+            SetFace();
             double maxWidth = 450;
             double unit = maxWidth / 100;
             if(App.User.giveStatus() * 25  > maxWidth)
@@ -29,6 +29,28 @@ namespace MiniBrowser
             HealthBar.Width = App.User.giveStatus() * unit;
             TopTasks = App.User.giveTopTasks();
             topTasks.Text = TopTasks;
+        }
+
+        public void SetFace()
+        {
+            var happy = App.User.giveStatus();
+            String pic = "";
+            if (happy < 25)
+            {
+                pic = "derpherp_sad.png";
+            }
+            else if (happy < 60)
+            {
+                pic = "derpherp_okay.png";
+            }
+            else
+            {
+                pic = "derpherp.png";
+            }
+            pic = "/MiniBrowser;component/" + pic;
+            Uri uri = new Uri(pic, UriKind.Relative);
+            ImageSource imgSource = new BitmapImage(uri);
+            face.Source = imgSource;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

@@ -74,6 +74,7 @@ namespace MiniBrowser
         private void button1_Click(object sender, RoutedEventArgs e)
         {
             App.User.addTask(this.task);
+            App.main.SetFace();
         }
         
 
