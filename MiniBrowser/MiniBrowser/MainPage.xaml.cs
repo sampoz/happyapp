@@ -151,9 +151,9 @@ namespace MiniBrowser
             return null;
         }
 
-        private void Search_Click(object sender, RoutedEventArgs e)
+        private void GotoStats(object sender, RoutedEventArgs e)
         {
-           
+            Navigation.GoToPage(this, Pages.Stats, null);
         }
         private void Create_task(object sender, RoutedEventArgs e)
         {

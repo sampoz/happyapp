@@ -82,10 +82,10 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
 
-            <Button Content="I Did This Shit!" Height="96" HorizontalAlignment="Left" Margin="103,432,0,0" Name="button1" VerticalAlignment="Top" Width="236"  Background="Green" />
+            <Button Click="button1_Click" Content="I Did This Shit!" Height="96" HorizontalAlignment="Left" Margin="103,432,0,0" Name="button1" VerticalAlignment="Top" Width="236"  Background="Green" />
             <Image Height="206" HorizontalAlignment="Left" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="236" />
             <TextBlock Height="28" HorizontalAlignment="Center" Margin="6,212,202,0" Name="taskDesc" Text="Description" VerticalAlignment="Top" Width="248"  />
-            <TextBlock TextAlignment="Center" Height="178" HorizontalAlignment="Left" Margin="256,6,0,0" Name="statusNumber" Text="0" FontSize="125" VerticalAlignment="Top" Width="155" />
+            <TextBlock TextAlignment="Center" Height="178" HorizontalAlignment="Left" Margin="242,6,0,0" Name="statusNumber" Text="0" FontSize="90" VerticalAlignment="Top" Width="155" />
         </Grid>
         <Grid Margin="12,342,12,208" Grid.Row="1">
             <local:ScrollViewerOffsetMediator x:Name="Mediator" ScrollViewer="{Binding ElementName=ItemScroller}" HorizontalOffset="150" />
