@@ -163,6 +163,7 @@
     <Resource Include="derpherp.png" />
     <Resource Include="derpherp_sad.png" />
     <Resource Include="derpherp_okay.png" />
+    <Resource Include="resources\runningGirl.jpg" />
     <Content Include="resources\DarkIcons.dll" />
     <Resource Include="resources\runner.png" />
     <Resource Include="resources\SPARTA.jpg" />
