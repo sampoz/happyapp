@@ -32,6 +32,22 @@
     			<EasingColorKeyFrame KeyTime="0:0:2" Value="Lime"/>
     		</ColorAnimationUsingKeyFrames>
     	</Storyboard>
+    	<Storyboard x:Name="RollFace">
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.TranslateX)" Storyboard.TargetName="face">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-40.4901"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="52.5"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(CompositeTransform.Rotation)" Storyboard.TargetName="face">
+    			<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-21.9946"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="17"/>
+    			<EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="0"/>
+    		</DoubleAnimationUsingKeyFrames>
+    	</Storyboard>
     </phone:PhoneApplicationPage.Resources>
         <!--LayoutRoot is the root grid where all page content is placed-->
     <Grid x:Name="LayoutRoot" Background="Transparent">
@@ -79,7 +95,11 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <Image x:Name="face" Source="derpherp.png" Height="169" Margin="0,0,39,59" />
+                <Image x:Name="face" Source="derpherp.png" Height="169" Margin="130,0,137,59" Grid.ColumnSpan="2" RenderTransformOrigin="0.5,0.5" >
+                	<Image.RenderTransform>
+                		<CompositeTransform/>
+                	</Image.RenderTransform>
+                </Image>
             </Grid>
           
         <TextBlock FontSize="35" Name="topTasks" Text="{Binding}" Margin="9,176,-9,89" Grid.Row="1" Grid.RowSpan="2" />

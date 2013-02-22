@@ -33,8 +33,6 @@ namespace MiniBrowser
 
         void OpenSesame_Completed(object sender, EventArgs e)
         {
-            OpenSesame.Stop();
-            OpenSesame.Seek(System.TimeSpan.FromTicks(0));
             Navigation.GoToPage(this, Pages.Main, null);
         }
     }

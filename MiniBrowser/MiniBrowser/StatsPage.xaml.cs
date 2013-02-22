@@ -41,14 +41,20 @@ namespace MiniBrowser
             String pic = "";
             if (happy < -25)
             {
+                RollFace.Stop();
+                RollFace.Seek(System.TimeSpan.FromTicks(0));
                 pic = "derpherp_sad.png";
             }
             else if (happy < 10)
             {
+                RollFace.Stop();
+                RollFace.Seek(System.TimeSpan.FromTicks(0));
                 pic = "derpherp_okay.png";
             }
             else
             {
+                RollFace.RepeatBehavior = new RepeatBehavior(100);
+                RollFace.Begin();
                 pic = "derpherp.png";
             }
             pic = "/MiniBrowser;component/" + pic;
