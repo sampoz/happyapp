@@ -101,9 +101,9 @@
                         <TextBlock Text="X" FontSize="33" HorizontalAlignment="Center" />
                     </Grid>
                     <Grid Background="Black" Width="456" Margin="10">
-                        <Image Source="resources/appbar.back.rest.png" Height="45" Margin="-10,2,421,-10" />
+                        <Image Source="resources/appbar.back.rest.png" Height="45" Margin="-10,2,421,2" />
                         <TextBlock TextAlignment="Center" FontSize="30" Text="Rate" Margin="-13,-1,13,1" />
-                        <Image Source="resources/appbar.next.rest.png" Height="45" Width="45" Margin="400,2,11,-10" />
+                        <Image Source="resources/appbar.next.rest.png" Margin="402,-2,10,-1" />
                     </Grid>
                     <Grid Width="150">
                         <Grid.Background>
