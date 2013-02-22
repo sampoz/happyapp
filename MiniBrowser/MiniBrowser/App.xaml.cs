@@ -34,15 +34,15 @@ namespace MiniBrowser
         {
 
 
-           
-            tasks.Add(new Task("Gym", "Excercaise at least for an hour", null));
-            tasks.Add(new Task("Go to lecture", "REad lecture slides before lecture", null));
-            tasks.Add(new Task("Go out", "Go out and meet people", null));
-            tasks.Add(new Task("Software development", "Programm something, Make something greate", null));
+            tasks.Add(new Task("Running", "Is fun", "/MiniBrowser;component/resources/runningGirl.jpg"));
+            tasks.Add(new Task("Gym", "Exercise at least for an hour", null));
+            tasks.Add(new Task("Lecture", "Read lecture slides", null));
+            tasks.Add(new Task("Going out", "Go out and meet people", null));
+            tasks.Add(new Task("Programming", "Programm something, Make something greate", null));
             tasks.Add(new Task("Be nice to your friend", "Remember that your spouse is not your enemy",null));
             tasks.Add(new Task("Read book", "Read at least 10 pages", null));
             tasks.Add(new Task("Sparta", "tietoa","/MiniBrowser;component/resources/SPARTA.jpg"));
-            tasks.Add(new Task("Running", "Is fun", "/MiniBrowser;component/resources/runner.png"));
+            
             
 
             // Global handler for uncaught exceptions. 
