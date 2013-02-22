@@ -161,6 +161,7 @@
     <Resource Include="resources\appbar.transport.rew.rest.png" />
     <Resource Include="resources\appbar.upload.rest.png" />
     <Resource Include="derpherp.png" />
+    <Resource Include="derpherp_sad.png" />
     <Content Include="resources\DarkIcons.dll" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>

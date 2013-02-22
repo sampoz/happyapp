@@ -10,6 +10,7 @@ using System.Windows.Media;
 using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
+using System.Windows.Media.Imaging;
 
 namespace MiniBrowser
 {
@@ -22,10 +23,18 @@ namespace MiniBrowser
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            var unit = MyCanvas.ActualWidth / 4;
+            HealthFill.Begin();
+            /*var unit = MyCanvas.ActualWidth / 4;
             HealthBar.Width += unit;
-            if (HealthBar.Width > unit * 4) HealthBar.Width = 1;
+            if (HealthBar.Width > unit * 4) HealthBar.Width = 1;*/
 
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Uri uri = new Uri("/MiniBrowser;component/derpherp_sad.png", UriKind.Relative);
+            ImageSource imgSource = new BitmapImage(uri);
+            face.Source = imgSource; 
         }
     }
 }
