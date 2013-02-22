@@ -19,6 +19,7 @@ namespace MiniBrowser
     {
 
         public static User User;
+        public static MainPage main;
         /// <summary>
         /// Provides easy access to the root frame of the Phone Application.
         /// </summary>
