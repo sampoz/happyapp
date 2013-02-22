@@ -17,12 +17,7 @@ namespace MiniBrowser
 {
     public partial class StatsPage : PhoneApplicationPage
     {
-        private ObservableCollection<string> _topTasks = new ObservableCollection<string>();
-        ObservableCollection<string> TopTasks
-        {
-            get { return _topTasks; }
-            set { _topTasks = value; }
-        }
+        private String TopTasks;
         public StatsPage()
         {
             InitializeComponent();
@@ -33,6 +28,7 @@ namespace MiniBrowser
                 HealthBar.Width = maxWidth;
             HealthBar.Width = App.User.giveStatus() * unit;
             TopTasks = App.User.giveTopTasks();
+            topTasks.Text = TopTasks;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

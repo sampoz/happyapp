@@ -40,11 +40,13 @@ namespace MiniBrowser
             this.doneTasks.Add(taski);
        
         }
-        public ObservableCollection<string> giveTopTasks()
+        public String giveTopTasks()
         {
-            ObservableCollection<string> Items = new ObservableCollection<string>();
+            String Items = "";
+            String line_break = "!&#13;";
             foreach(Task task in this.doneTasks){
-                Items.Add(task.getName());
+                Items += task.getName();
+                Items += Environment.NewLine;
                 
             }
             return Items;

@@ -11,8 +11,7 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True"
-   DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    shell:SystemTray.IsVisible="True">
     
 
     <phone:PhoneApplicationPage.Resources>
@@ -82,17 +81,9 @@
                 </Grid.ColumnDefinitions>
                 <Image x:Name="face" Source="derpherp.png"/>
             </Grid>
-            <StackPanel Grid.Row="2">
-                <ListBox x:Name="listbox" ItemsSource="{Binding TopTasks}" Margin="0,62,-12,-98" Height="243">
-                    <ListBox.ItemTemplate>
-                        <DataTemplate>
-                            <Grid>
-                                <TextBlock FontSize="50" Text="{Binding}" />
-                            </Grid>
-                        </DataTemplate>
-                    </ListBox.ItemTemplate>
-                </ListBox>
-            </StackPanel>
+          
+        <TextBlock FontSize="50" Name="topTasks" Text="{Binding}" Margin="9,0,-9,89" Grid.Row="2" />
+                       
         </Grid>
         <Grid>
 
