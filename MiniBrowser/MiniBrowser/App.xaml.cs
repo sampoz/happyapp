@@ -31,8 +31,7 @@ namespace MiniBrowser
         /// </summary>
         public App()
         {
-            tasks.Add(new Task("Madness", "tietoa", null));
-            tasks.Add(new Task("Sparta", "tietoa", null));
+
 
             for (int i = 0; i < 20; i++ )
             {

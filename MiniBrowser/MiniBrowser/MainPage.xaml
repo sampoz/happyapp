@@ -97,15 +97,15 @@
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="3" Margin="12,0,12,228" Grid.ColumnSpan="2">
             <TextBlock Height="89" HorizontalAlignment="Left" Margin="0,-33,0,0" Name="favouritesLabel" Text="favourites" VerticalAlignment="Top" Width="308" Style="{StaticResource PhoneTextTitle1Style}" />
-            <ListBox x:Name="listbox" ItemsSource="{Binding Items}" Margin="0,62,-12,-117">
-            <ListBox x:Name="listbox" ItemsSource="{Binding Items}" Margin="0,62,-12,-149">
+            
+            <ListBox x:Name="listbox" ItemsSource="{Binding Items}" Margin="0,62,-12,-98">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <Grid>
                             <local:ScrollViewerOffsetMediator x:Name="Mediator" ScrollViewer="{Binding ElementName=ItemScroller}" HorizontalOffset="150" />
                             <ScrollViewer x:Name="ItemScroller" Tag="{Binding ElementName=Mediator}" Width="456" Style="{StaticResource ListItemScrollViewer}" Loaded="ScrollViewer_Loaded">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock FontSize="30" Text="{Binding}" />
+                                    <TextBlock FontSize="50" Text="{Binding}" />
                                     <Image Source="resources/appbar.next.rest.png" Height="45" Width="45"/>
                                     
                                          
@@ -115,7 +115,9 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+          
             
+
         </Grid>
         <TextBlock Height="106" HorizontalAlignment="Left" Name="usernameLabel" Text="Username" Style="{StaticResource PhoneTextTitle1Style}" VerticalAlignment="Top" Grid.ColumnSpan="2" Width="308" Margin="12,22,0,0" />
         <TextBlock Height="30" HorizontalAlignment="Left" Margin="12,0,0,270" Name="welcomeText" Text="welcome" />
