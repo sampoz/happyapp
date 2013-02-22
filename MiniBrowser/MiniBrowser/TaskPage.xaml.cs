@@ -24,9 +24,7 @@ namespace MiniBrowser
         private Task task;
         public TaskPage()
         {
-            InitializeComponent();
-            
-            
+            InitializeComponent();        
 
         }
         public void Rate_healthy(object sender, RoutedEventArgs e)

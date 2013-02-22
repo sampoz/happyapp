@@ -44,22 +44,7 @@ namespace MiniBrowser
 
         }
 
-        private void OnFlick(object sender, FlickGestureEventArgs e)
-        {
-                
-            
-              
-                // User flicked towards left
-                if (e.HorizontalVelocity < 40 && e.HorizontalVelocity > -40)
-                {
-                   if (e.VerticalVelocity > 0)
-                {
-                   Navigation.GoToPage(this,Pages.Stats,null);
-                }
-                
-
-            }
-        }
+ 
 
 
         public void ScrollViewer_Loaded(object sender, RoutedEventArgs e)

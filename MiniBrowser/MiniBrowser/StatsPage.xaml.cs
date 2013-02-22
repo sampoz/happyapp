@@ -11,16 +11,24 @@ using System.Windows.Media.Animation;
 using System.Windows.Shapes;
 using Microsoft.Phone.Controls;
 using System.Windows.Media.Imaging;
+using System.Collections.ObjectModel;
 
 namespace MiniBrowser
 {
     public partial class StatsPage : PhoneApplicationPage
     {
+        private ObservableCollection<string> _topTasks = new ObservableCollection<string>();
+        ObservableCollection<string> TopTasks
+        {
+            get { return _topTasks; }
+            set { _topTasks = value; }
+        }
         public StatsPage()
         {
             InitializeComponent();
 
             HealthBar.Width = 400;
+            TopTasks = App.User.giveTopTasks();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

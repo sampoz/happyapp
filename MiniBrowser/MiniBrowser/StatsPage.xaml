@@ -11,7 +11,9 @@
     Foreground="{StaticResource PhoneForegroundBrush}"
     SupportedOrientations="Portrait" Orientation="Portrait"
     mc:Ignorable="d" d:DesignHeight="768" d:DesignWidth="480"
-    shell:SystemTray.IsVisible="True">
+    shell:SystemTray.IsVisible="True"
+   DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    
 
     <phone:PhoneApplicationPage.Resources>
     	<Storyboard x:Name="HealthFill">
@@ -85,7 +87,7 @@
             <Button Grid.Row="2" Height="100" Width="300" Content="Drugs" Click="Button_Click_1"/>
             </StackPanel>
         </Grid>
-        <!--<ListBox x:Name="listbox" ItemsSource="{Binding Items}" Margin="0,62,-12,-98">
+        <ListBox x:Name="listbox" ItemsSource="{Binding TopTasks}" Margin="0,62,-12,-98">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <Grid> 
@@ -93,7 +95,7 @@
                     </Grid>
                 </DataTemplate>
             </ListBox.ItemTemplate>
-        </ListBox>-->
+        </ListBox>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
