@@ -75,6 +75,7 @@ namespace MiniBrowser
         {
             App.User.addTask(this.task);
             App.main.SetFace();
+            Navigation.GoToPage(this, Pages.Main, null);
         }
         
 

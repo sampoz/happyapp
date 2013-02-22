@@ -14,7 +14,7 @@
     shell:SystemTray.IsVisible="True">
 
     <!--LayoutRoot is the root grid where all page content is placed-->
-    <Grid x:Name="LayoutRoot" Background="Transparent">
+    <Grid x:Name="LayoutRoot"  >
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
@@ -33,6 +33,9 @@
             <Button Content="Go" Height="72" HorizontalAlignment="Left" Margin="291,71,0,0" Name="submitButton" Click="submitNewUser" VerticalAlignment="Top" Width="87" />
             <TextBlock Visibility="Collapsed" HorizontalAlignment="Left" Margin="12,319,0,220" Name="passwordError" Text="Passwords don't match" Width="206" />
         </Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="resources/stones.jpg" Stretch="UniformToFill" />
+        </Grid.Background>
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->
