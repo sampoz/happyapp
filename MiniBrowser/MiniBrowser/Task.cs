@@ -18,6 +18,9 @@ namespace MiniBrowser
         public String Description
         { get { return _description; } }
         String imgSrc { get; set; }
+
+        public int status = 0;
+
         int healthy;
         public Task(String name, String des, String imgSrc="")
         {
