@@ -146,6 +146,8 @@
     <Resource Include="resources\appbar.transport.rew.rest.png" />
     <Resource Include="resources\appbar.upload.rest.png" />
     <Content Include="resources\DarkIcons.dll" />
+    <Resource Include="resources\runner.png" />
+    <Resource Include="resources\SPARTA.jpg" />
     <Content Include="SplashScreenImage.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\Silverlight for Phone\$(TargetFrameworkVersion)\Microsoft.Silverlight.$(TargetFrameworkProfile).Overrides.targets" />

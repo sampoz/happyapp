@@ -17,6 +17,7 @@ namespace MiniBrowser
         public string Username { get; set; }
         public string Password { get; set; }
         public List<Task> Favourites { get; set; }
+        public List<Task> doneTasks = new List<Task>();
         
         public User(string Username, string Password)
         {
@@ -26,6 +27,11 @@ namespace MiniBrowser
             this.Favourites = App.tasks;
             
 
+        }
+        public void addTask(Task taski)
+        {
+            this.doneTasks.Add(taski);
+       
         }
     }
 }
