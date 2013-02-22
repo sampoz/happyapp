@@ -40,7 +40,7 @@
         </Grid.RowDefinitions>
 
         <!--TitlePanel contains the name of the application and page title-->
-        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
+        <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,14">
             <TextBlock x:Name="ApplicationTitle" Text="HappyApp" Style="{StaticResource PhoneTextNormalStyle}"/>
             <TextBlock x:Name="PageTitle" Text="Stats" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
@@ -52,7 +52,7 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Canvas x:Name="MyCanvas"  Grid.Row="0" Height="50">
+            <Canvas x:Name="MyCanvas"  Grid.Row="0" Height="50" Margin="20,10,20,10">
                 <Rectangle Fill="#202020"
                            Width="{Binding ElementName=MyCanvas, Path=ActualWidth}"
                            Height="50"
@@ -64,7 +64,7 @@
                 <Rectangle x:Name="HealthBar" Fill="#00FF00"
                            HorizontalAlignment="Stretch"
                            Height="50"
-                           Width="10"
+                           Width="{Binding Health}"
                            Canvas.Left="0"
                            Canvas.Top="0" RenderTransformOrigin="0.5,0.5"
                            >

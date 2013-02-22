@@ -44,6 +44,10 @@ namespace MiniBrowser
 
         }
 
+        public void SetFace()
+        {
+        }
+
 
         public void ScrollViewer_Loaded(object sender, RoutedEventArgs e)
         {
