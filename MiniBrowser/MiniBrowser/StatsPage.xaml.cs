@@ -14,11 +14,13 @@ using System.Windows.Media.Imaging;
 
 namespace MiniBrowser
 {
-    public partial class Page1 : PhoneApplicationPage
+    public partial class StatsPage : PhoneApplicationPage
     {
-        public Page1()
+        public StatsPage()
         {
             InitializeComponent();
+
+            HealthBar.Width = 400;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
