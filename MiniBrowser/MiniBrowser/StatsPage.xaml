@@ -85,6 +85,15 @@
             <Button Grid.Row="2" Height="100" Width="300" Content="Drugs" Click="Button_Click_1"/>
             </StackPanel>
         </Grid>
+        <!--<ListBox x:Name="listbox" ItemsSource="{Binding Items}" Margin="0,62,-12,-98">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid> 
+                      <TextBlock FontSize="50" Text="{Binding}" />   
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>-->
     </Grid>
  
     <!--Sample code showing usage of ApplicationBar-->

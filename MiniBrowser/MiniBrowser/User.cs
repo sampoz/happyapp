@@ -39,20 +39,23 @@ namespace MiniBrowser
             this.doneTasks.Add(taski);
        
         }
+        public void giveTopTasks()
+        {
+          
+        }
         public int giveStatus()
         {
             int sum = 0;
             int status = 0;
-            foreach (Task task in this.doneTasks)
+            for (int i = 0; i < this.doneTasks.Count; i++ )
             {
+                Task task = this.doneTasks[i];
                 sum += task.status;
             }
-            if (this.doneTasks.Count > 0) {
-                status = sum/(this.doneTasks.Count);
-            }
-            if (status > 10)
+
+            if (status > 100)
             {
-                status = 10;
+                status = 100;
             }
             return status;
              
