@@ -65,6 +65,10 @@ namespace MiniBrowser
             {
                 status = 100;
             }
+            if (status < 0)
+            {
+                status = 0;
+            }
             return status;
              
         }
