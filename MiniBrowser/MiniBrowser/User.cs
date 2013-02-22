@@ -43,16 +43,27 @@ namespace MiniBrowser
         public String giveTopTasks()
         {
             String Items = "";
-            String line_break = "!&#13;";
-            foreach(Task task in this.doneTasks){
-                Items += task.getName();
-                Items += "  ";
-                if (task.status > 0)
-                    Items += "+";
-                Items += task.status;
-                Items += Environment.NewLine;
-                
+            Dictionary<String, int> topTasks = new Dictionary<String, int> ();
+            foreach (Task task in this.doneTasks)
+            {
+                if (!topTasks.ContainsKey(task.getName()))
+                {
+                    topTasks.Add(task.getName(), 1);
+                }
+                else {
+                    int temp = topTasks[task.getName()];
+                    topTasks[task.getName()] = temp + 1;
+                }
             }
+            foreach (KeyValuePair<string, int> pair in topTasks)
+            {
+                Items += pair.Key;
+                Items += "  +";
+                Items += pair.Value;
+                Items += Environment.NewLine;
+
+            }
+       
             return Items;
         }
         public int giveStatus()
